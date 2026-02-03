@@ -97,11 +97,11 @@
       let inpt = document.getElementById("inpt").value.trim().toLowerCase();
       let outp = document.getElementById("outp");
 
-      if (inpt.includes("a")) {
-        outp.innerHTML = "አ";
-      } else if(inpt = " "){
+      if(inpt === ""){
         outp.innerHTML = "You DID NOT WRITE ANYTHING!!!"
         outp.style.color = "red";
+      }else if(inpt.includes("a")) {
+        outp.innerHTML = "አ";
       }else {
         outp.innerHTML = 'Only "A" is supported for now.';
       }
