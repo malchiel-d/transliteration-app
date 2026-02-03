@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transliterate</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 400px;
+      background: #ffffff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .container h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+      color: #333;
+    }
+
+    #inpt {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 16px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      transition: all 0.2s;
+    }
+
+    #inpt:focus {
+      border-color: #000;
+      box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+      outline: none;
+    }
+
+    #btn {
+      padding: 10px ;
+      font-size: 16px;
+      border-radius: 12px;
+      border: none;
+      background-color: #000;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    #btn:hover {
+      background-color: #333;
+    }
+
+    .result {
+      font-size: 18px;
+      color: #555;
+      margin-top: 8px;
+      min-height: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Transliterate: English to Amharic</h1>
+    <input id="inpt" placeholder="Enter text…" />
+    <button id="btn" onclick="clicked()">Convert</button>
+    <div class="result">
+      <strong>Result:</strong>
+      <p id="outp"></p>
+    </div>
+  </div>
+  
+
+ 
+  <script>
+    function clicked() {
+      let inpt = document.getElementById("inpt").value.trim().toLowerCase();
+      let outp = document.getElementById("outp");
+
+      if (inpt.includes("a")) {
+        outp.innerHTML = "አ";
+      } else if(inpt = " "){
+        outp.innerHTML = "You DID NOT WRITE ANYTHING!!!"
+        outp.style.color = "red";
+      }else {
+        outp.innerHTML = 'Only "A" is supported for now.';
+      }
+    }
+  </script>
+</body>
+</html>
