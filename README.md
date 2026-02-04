@@ -1,7 +1,4 @@
 # Transliteration App (v0)
-
-> This is a **test project** for transliteration.
-
 ## What it does
 This is a simple web app that converts certain letters from Latin script to a target script (currently only "A" → "አ").
 
