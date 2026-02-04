@@ -93,26 +93,47 @@
 
  
   <script>
+  
     function clicked() {
       let inpt = document.getElementById("inpt");
       let text = inpt.value.trim().toLowerCase();
       let outp = document.getElementById("outp");
       //reset color
       outp.style.color = "";
-      
+
       if(text === ""){
         outp.innerHTML = "You DID NOT WRITE ANYTHING!!!"
         outp.style.color = "red";
       }
-      else if(text.includes("a")) {
-        outp.innerHTML = "አ";
+      else if(text === "ee" ){
+        outp.innerHTML = "ኧ";
+      }
+      else if(text === "u" ) {
+        outp.innerHTML = "ኡ";
+      }
+      else if(text === "i" ) {
+        outp.innerHTML = "ኢ";
+      }
+      else if(text === "a" ) {
+        outp.innerHTML = "ኣ";
+      }
+      else if(text === "ei" ) {
+        outp.innerHTML = "ኤ";
+      }
+      else if(text === "e" ) {
+        outp.innerHTML = "እ";
+      }
+      else if(text === "o" ) {
+        outp.innerHTML = "ኦ";
       }
       else {
-        outp.innerHTML = 'Only "A" is supported for now.';
+        outp.innerHTML = 'Only vowels are supported for now.';
       }
+      
       //reset input
       inpt.value = "";
     }
+  
   </script>
 </body>
 </html>
