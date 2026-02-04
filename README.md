@@ -19,7 +19,7 @@ This is a simple web app that converts certain letters from Latin script to a ta
 ## Dictionary 
 | Order | 1st (e/a/ee) | 2nd (u) | 3rd (i) | 4th (a) | 5th (e) | 6th (-) | 7th (o) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **VOWELS** | ኧ ee | ኡ u | ኢ i |  - | ኤ ei | እ e | ኦ o |
+| **VOWELS** | ኧ ee | ኡ u | ኢ i | አ a | ኤ ei | እ e | ኦ o |
 | **H** |  ሀ ha | ሁ hu | ሂ hi | ሃ ha | ሄ he | ህ h | ሆ ho |
 | **L** | ለ le | ሉ lu | ሊ li | ላ la | ሌ le | ል l | ሎ lo |
 | **M** | መ me | ሙ mu | ሚ mi | ማ ma | ሜ me | ም m | ሞ mo |
