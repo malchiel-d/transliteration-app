@@ -94,17 +94,24 @@
  
   <script>
     function clicked() {
-      let inpt = document.getElementById("inpt").value.trim().toLowerCase();
+      let inpt = document.getElementById("inpt");
+      let text = inpt.value.trim().toLowerCase();
       let outp = document.getElementById("outp");
-
-      if(inpt === ""){
+      //reset color
+      outp.style.color = "";
+      
+      if(text === ""){
         outp.innerHTML = "You DID NOT WRITE ANYTHING!!!"
         outp.style.color = "red";
-      }else if(inpt.includes("a")) {
+      }
+      else if(text.includes("a")) {
         outp.innerHTML = "አ";
-      }else {
+      }
+      else {
         outp.innerHTML = 'Only "A" is supported for now.';
       }
+      //reset input
+      inpt.value = "";
     }
   </script>
 </body>
