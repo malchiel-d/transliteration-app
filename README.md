@@ -1,6 +1,6 @@
 # Litra (v0)
 ## What it does
-Litra is a simple web app that converts certain letters from Latin script to a target script (currently Amharic vowels). 
+Litra is a simple web app that converts certain letters from Latin script to a target script (currently Amharic letters). 
 ## Difference Between Translation and Transliteration
 - **Translation**: Converts the **meaning** of text from one language to another.  
   - Example: "Hello" -> "ሰላም"
@@ -8,7 +8,7 @@ Litra is a simple web app that converts certain letters from Latin script to a t
   - Example: "Selam" -> "ሰላም" 
 
 ## How to Use
-1. [click here](https://malchiel-d.github.io/transliteration-app/).
+1. [click here](https://malchiel-d.github.io/litra/).
 2. Enter a letter in the input box.
 3. Click **Convert** to see the result.
 
