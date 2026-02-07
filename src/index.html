@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Litra</title>
+    
+</head>
+
+<body>
+  
+  <div class="container">
+    <h1>Transliterate: English to Amharic</h1>
+    <input 
+      type="text"
+      id="userInput" 
+      class="userInput"
+      placeholder="Enter text…" 
+      autocomplete="off" 
+      oninput="this.value = this.value.replace(/[^a-zA-Z]/g, '')"
+      />
+    
+   <button onclick="clicked()">Convert</button>
+
+
+    <div class="result">
+      <strong>Result:</strong>
+      <p id="outp">result goes here</p>
+    </div>
+  </div>
+  
+  
+  
+   <script src="script.js"></script>
+</body>
+</html>
