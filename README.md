@@ -35,7 +35,7 @@ This is a simple web app that converts certain letters from Latin script to a ta
 | **ZZ** | ዠ zze | ዡ zzu | ዢ zzi | ዣ zza | ዤ zzee | ዥ zz | ዦ zzo |
 | **Y** | የ ye | ዩ yu | ዪ yi | ያ ya | ዬ yee | ይ y | ዮ yo |
 | **D** | ደ de | ዱ du | ዲ di | ዳ da | ዴ dee | ድ d | ዶ do |
-| **JJ** | ጀ je | ጁ ju | ጂ ji | ጃ ja | ጄ jee | ጅ j | ጆ jo |
+| **J** | ጀ je | ጁ ju | ጂ ji | ጃ ja | ጄ jee | ጅ j | ጆ jo |
 | **G** | ገ ge | ጉ gu | ጊ gi | ጋ ga | ጌ gee | ግ g | ጎ go |
 | **TT** | ጠ tte | ጡ ttu | ጢ tti | ጣ tta | ጤ ttee | ጥ tt | ጦ tto |
 | **CHH** | ጨ chhe | ጩ chhu | ጪ chhi | ጫ chha | ጬ chhee | ጭ chh | ጮ chho |
