@@ -4,89 +4,9 @@
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Transliterate</title>
-
-  <style>
-    * {
-      -webkit-tap-highlight-color: transparent;
-      box-sizing: border-box;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-
-    body {
-      margin: 0;
-      background: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .container {
-      max-height:100%;
-      width: 90%;
-      max-width: 400px;
-      background: #fff;
-      padding: 32px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .container h1 {
-      margin: 0;
-      font-size: 24px;
-      font-weight: 600;
-      text-align: center;
-      color: #333;
-    }
-
-    .userInput {
-      width: 100%;
-      padding: 14px 16px;
-      font-size: 16px;
-      border-radius: 12px;
-      border: 1px solid #ccc;
-      transition: all 0.2s;
-    }
-
-     .userInput:focus {
-      border-color: #000;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
-      outline: none;
-    }
     
-     button {
-     font-size: 17px;
-     padding: 1em 2.7em;
-     font-weight: 500;
-     background: #1f2937;
-     color: white;
-     border: none;
-     position: relative;
-     overflow: hidden;
-     border-radius: 0.6em;
-     cursor: pointer;
- }
-
-    button:hover .transition {
-     width: 14em;
-     height: 14em;
-   }
-
-    button:active {
-     transform: scale(0.97);
-   }
-
-    .result {
-      font-size: 18px;
-      color: #555;
-      margin-top: 8px;
-      min-height: 24px;
-    }
-  </style>
-  
 </head>
 
 <body>
@@ -112,67 +32,7 @@
   </div>
   
   
-  <script>
-    
-    function clicked() {
-      let inpt = document.getElementById("userInput");
-      let text = inpt.value.trim().toLowerCase();
-      let outp = document.getElementById("outp");
-      //reset color
-      outp.style.color = "";        
-const dictionary = {
-    "ee": "ኧ","u": "ኡ","i": "ኢ","a": "አ","ei": "ኤ","e": "እ","o": "ኦ",
-    "ha": "ሀ","hu": "ሁ","hi": "ሂ","haa": "ሃ","he": "ሄ","h": "ህ","ho": "ሆ",
-    "le": "ለ","lu": "ሉ","li": "ሊ","la": "ላ","lee": "ሌ","l": "ል","lo": "ሎ",
-    "me": "መ","mu": "ሙ","mi": "ሚ","ma": "ማ","mee": "ሜ","m": "ም","mo": "ሞ",
-    "re": "ረ","ru": "ሩ","ri": "ሪ","ra": "ራ","ree": "ሬ","r": "ር","ro": "ሮ",
-    "se": "ሰ","su": "ሱ","si": "ሲ","sa": "ሳ","see": "ሴ","s": "ስ","so": "ሶ",
-    "she": "ሸ","shu": "ሹ","shi": "ሺ","sha": "ሻ","shee": "ሼ","sh": "ሽ","sho": "ሾ",
-    "qe": "ቀ","qu": "ቁ","qi": "ቂ","qa": "ቃ","qee": "ቄ","q": "ቅ","qo": "ቆ",
-    "be": "በ","bu": "ቡ","bi": "ቢ","ba": "ባ","bee": "ቤ","b": "ብ","bo": "ቦ",
-    "te": "ተ","tu": "ቱ","ti": "ቲ","ta": "ታ","tee": "ቴ","t": "ት","to": "ቶ",
-    "che": "ቸ","chu": "ቹ","chi": "ቺ","cha": "ቻ","chee": "ቼ","ch": "ች","cho": "ቾ",
-    "ne": "ነ","nu": "ኑ","ni": "ኒ","na": "ና","nee": "ኔ","n": "ን","no": "ኖ",
-    "nge": "ኘ","ngu": "ኙ","ngi": "ኚ","nga": "ኛ","ngee": "ኜ","ng": "ኝ","ngo": "ኞ",
-    "ke": "ከ","ku": "ኩ",
-    "ki": "ኪ","ka": "ካ","kee": "ኬ","k": "ክ","ko": "ኮ",
-    "hee": "ኸ",
-    "we": "ወ","wu": "ዉ","wi": "ዊ","wa": "ዋ","wee": "ዌ","w": "ው","wo": "ዎ",
-    "ze": "ዘ","zu": "ዙ","zi": "ዚ","za": "ዛ","zee": "ዜ","z": "ዝ","zo": "ዞ",
-    "zze": "ዠ","zzu": "ዡ","zzi": "ዢ","zza": "ዣ","zzee": "ዤ","zz": "ዥ","zzo": "ዦ",
-    "ye": "የ","yu": "ዩ","yi": "ዪ","ya": "ያ","yee": "ዬ","y": "ይ","yo": "ዮ",
-    "de": "ደ","du": "ዱ","di": "ዲ","da": "ዳ","dee": "ዴ","d": "ድ","do": "ዶ",
-    "je": "ጀ","ju": "ጁ","ji": "ጂ","ja": "ጃ","jee": "ጄ","j": "ጅ","jo": "ጆ",
-    "ge": "ገ","gu": "ጉ","gi": "ጊ","ga": "ጋ","gee": "ጌ","g": "ግ","go": "ጎ",
-    "tte": "ጠ","ttu": "ጡ","tti": "ጢ","tta": "ጣ","ttee": "ጤ","tt": "ጥ","tto": "ጦ",
-    "chhe": "ጨ","chhu": "ጩ","chhi": "ጪ","chha": "ጫ","chhee": "ጬ","chh": "ጭ","chho": "ጮ",
-    "ppe": "ጰ","ppu": "ጱ","ppi": "ጲ","ppa": "ጳ","ppee": "ጴ","pp": "ጵ","ppo": "ጶ",
-    "tse": "ፀ","tsu": "ፁ","tsi": "ፂ","tsa": "ፃ","tsee": "ፄ","ts": "ፅ","tso": "ፆ",
-    "fe": "ፈ","fu": "ፉ","fi": "ፊ","fa": "ፋ","fee": "ፌ","f": "ፍ","fo": "ፎ",
-    "pe": "ፐ","pu": "ፑ","pi": "ፒ","pa": "ፓ","pee": "ፔ","p": "ፕ","po": "ፖ",
-    "ve": "ቨ","vu": "ቩ","vi": "ቪ","va": "ቫ","vee": "ቬ","v": "ቭ","vo": "ቮ"
-};
-
-      
- 
-      let translate = dictionary[text];
-      if(text === ""){
-        outp.innerHTML = "field is required"
-        outp.style.color = "red"
-      }
-      else if(translate){
-        outp.innerHTML = translate;
-      }else{
-        outp.innerHTML = `"${text}" NOT FOUND`;
-        outp.style.color = "red";
-      }
-     
-      
-      //reset input
-      inpt.value = "";
-      
-    }
   
-  </script>
+   <script src="script.js"></script>
 </body>
 </html>
