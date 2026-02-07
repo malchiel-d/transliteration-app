@@ -1,6 +1,6 @@
-# Transliteration App (v0)
+# Litra (v0)
 ## What it does
-This is a simple web app that converts certain letters from Latin script to a target script (currently Amharic vowels). 
+Litra is a simple web app that converts certain letters from Latin script to a target script (currently Amharic vowels). 
 ## Difference Between Translation and Transliteration
 - **Translation**: Converts the **meaning** of text from one language to another.  
   - Example: "Hello" -> "ሰላም"
@@ -47,7 +47,7 @@ This is a simple web app that converts certain letters from Latin script to a ta
 
 ## Roadmap
 
-   ✅️ fullyDone | 🟢 done but not fully  
+   ✅️ Done | 🟢 Half done  
 
 ### v0: Proof of Concept ✅
 * **Goal:** Verify that a single Latin character can be swapped for a Ge'ez character.
