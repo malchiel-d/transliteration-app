@@ -16,7 +16,7 @@ It is important to know the difference:
 
 ##  Dictionary 
 
-👉 **[Click here to see all the letters and combinations](/src/Dictionary.html)**
+👉 **[Click here to see all the letters and combinations](https://malchiel-d.github.io/litra/dictionary.html)**
 
 ### Quick Vowel Reference
 | Order | 1st (e) | 2nd (u) | 3rd (i) | 4th (a) | 5th (ei) | 6th (-) | 7th (o) |
